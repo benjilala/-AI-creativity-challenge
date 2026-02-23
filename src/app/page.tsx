@@ -40,7 +40,7 @@ const outcomes = [
   },
 ]
 
-export default function DashboardPage() {
+export default function OverviewPage() {
   const sprint = getSprintDay()
 
   return (
@@ -60,11 +60,22 @@ export default function DashboardPage() {
           </p>
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-          A 1-week sprint for designers. Pick a track, build an AI-powered
-          pipeline, and demo it live on Day 7. The goal isn&apos;t perfection
-          &mdash; it&apos;s proof that your system works and others can use it.
-        </p>
+        <div className="space-y-4 max-w-xl">
+          <p className="text-sm font-medium text-foreground leading-relaxed">
+            AI gives us leverage. Structure gives us discipline. Chaos gives us originality.
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Spend one week experimenting with AI. Build one workflow that makes
+            your work faster, improves quality, removes friction, or makes things
+            more fun. It can be small. It can be messy. It can be ambitious. If
+            it saves you time or energy, it counts.
+          </p>
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
+            Asset generators, UI builders, research shortcuts, prompt libraries,
+            campaign kits, workflow automations, design helpers &mdash; if it
+            helps, it belongs.
+          </p>
+        </div>
 
         {/* Sprint status */}
         <div className="flex items-center gap-3">

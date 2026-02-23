@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
-  LayoutDashboard,
+  BookOpen,
   Layers,
   Wrench,
   Calendar,
@@ -26,7 +26,7 @@ const navGroups = [
   {
     label: null,
     items: [
-      { title: "Dashboard", href: "/", icon: LayoutDashboard },
+      { title: "Overview", href: "/", icon: BookOpen },
     ],
   },
   {
