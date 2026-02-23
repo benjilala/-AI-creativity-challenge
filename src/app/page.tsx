@@ -46,65 +46,89 @@ export default function OverviewPage() {
   return (
     <div className="space-y-12">
       {/* Hero */}
-      <div className="space-y-6 pt-4">
-        <div className="space-y-4">
-          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tighter leading-[0.95]">
-            Zero{" "}
-            <span className="text-muted-foreground/40">&rarr;</span>{" "}
-            Production{" "}
-            <span className="text-muted-foreground/40">&rarr;</span>{" "}
-            <span className="text-chaos">System</span>
-          </h1>
-          <p className="text-lg sm:text-xl font-light text-muted-foreground tracking-tight max-w-lg">
-            Automate the Obvious. Elevate the Important.
-          </p>
-        </div>
+      <section className="pt-4 space-y-5">
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tighter leading-[0.95]">
+          Zero{" "}
+          <span className="text-muted-foreground/40">&rarr;</span>{" "}
+          Production{" "}
+          <span className="text-muted-foreground/40">&rarr;</span>{" "}
+          <span className="text-chaos">System</span>
+        </h1>
+        <p className="text-lg sm:text-xl font-light text-muted-foreground tracking-tight max-w-lg">
+          Automate the Obvious. Elevate the Important.
+        </p>
+      </section>
 
-        <div className="space-y-4 max-w-xl">
-          <p className="text-sm font-medium text-foreground leading-relaxed">
+      {/* Content sections */}
+      <div className="grid gap-10 sm:grid-cols-2 max-w-3xl">
+        <section className="space-y-2">
+          <h2 className="text-sm font-semibold text-foreground tracking-tight">
+            Why This Sprint Exists
+          </h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
             AI gives us leverage. Structure gives us discipline. Chaos gives us originality.
           </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-sm font-semibold text-foreground tracking-tight">
+            The Challenge
+          </h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Spend one week experimenting with AI. Build one workflow that makes
             your work faster, improves quality, removes friction, or makes things
-            more fun. It can be small. It can be messy. It can be ambitious. If
-            it saves you time or energy, it counts.
+            more fun.
           </p>
-          <p className="text-xs text-muted-foreground/80 leading-relaxed">
-            Asset generators, UI builders, research shortcuts, prompt libraries,
-            campaign kits, workflow automations, design helpers &mdash; if it
-            helps, it belongs.
-          </p>
-        </div>
+        </section>
 
-        {/* Sprint status */}
-        <div className="flex items-center gap-3">
-          {sprint.status === "active" && (
-            <div className="glass glass-glow rounded-lg px-4 py-2.5 flex items-center gap-3">
-              <div className="size-2.5 rounded-full bg-chaos animate-pulse-glow" />
-              <span className="text-sm font-semibold tabular-nums text-chaos">
-                Day {sprint.current} of {sprint.total}
-              </span>
-              <span className="text-xs text-muted-foreground">Sprint active</span>
-            </div>
-          )}
-          {sprint.status === "before" && (
-            <div className="glass rounded-lg px-4 py-2.5 flex items-center gap-3">
-              <div className="size-2.5 rounded-full bg-muted-foreground/40" />
-              <span className="text-sm font-medium text-muted-foreground">
-                Starting soon
-              </span>
-            </div>
-          )}
-          {sprint.status === "complete" && (
-            <div className="glass rounded-lg px-4 py-2.5 flex items-center gap-3">
-              <div className="size-2.5 rounded-full bg-success" />
-              <span className="text-sm font-semibold text-success">
-                Challenge complete
-              </span>
-            </div>
-          )}
-        </div>
+        <section className="space-y-2">
+          <h2 className="text-sm font-semibold text-foreground tracking-tight">
+            What Counts
+          </h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            It can be small. It can be messy. It can be ambitious. If it saves
+            you time or energy, it counts.
+          </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-sm font-semibold text-foreground tracking-tight">
+            Examples
+          </h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Asset generators, UI builders, research shortcuts, prompt libraries,
+            campaign kits, workflow automations, design helpers.
+          </p>
+        </section>
+      </div>
+
+      {/* Sprint status */}
+      <div className="flex items-center gap-3">
+        {sprint.status === "active" && (
+          <div className="glass glass-glow rounded-lg px-4 py-2.5 flex items-center gap-3">
+            <div className="size-2.5 rounded-full bg-chaos animate-pulse-glow" />
+            <span className="text-sm font-semibold tabular-nums text-chaos">
+              Day {sprint.current} of {sprint.total}
+            </span>
+            <span className="text-xs text-muted-foreground">Sprint active</span>
+          </div>
+        )}
+        {sprint.status === "before" && (
+          <div className="glass rounded-lg px-4 py-2.5 flex items-center gap-3">
+            <div className="size-2.5 rounded-full bg-muted-foreground/40" />
+            <span className="text-sm font-medium text-muted-foreground">
+              Starting soon
+            </span>
+          </div>
+        )}
+        {sprint.status === "complete" && (
+          <div className="glass rounded-lg px-4 py-2.5 flex items-center gap-3">
+            <div className="size-2.5 rounded-full bg-success" />
+            <span className="text-sm font-semibold text-success">
+              Challenge complete
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Quick links */}
